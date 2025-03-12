@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hospital Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+              <div>
+               <button class="btn btn-danger" [routerLink]="['/doclogin']">Login as Doctor</button>&nbsp;
+               <button class="btn btn-danger" [routerLink]="['/adlogin']">Login as Admin</button>
+              </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="bg-light text-center py-5">
+        <div class="container">
+            <h1>Welcome to All is Well Hospital</h1>
+            <p class="lead">Providing Quality Healthcare with Modern Technology</p>
+            <a href="#services" class="btn btn-primary">Explore Services</a>
+        </div>
+    </header>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h3>Emergency Care</h3>
+                        <p>24/7 Emergency Services available for immediate care.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h3>Outpatient Services</h3>
+                        <p>Quick and efficient outpatient services for all patients.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3">
+                        <h3>Pharmacy</h3>
+                        <p>On-site pharmacy with all essential medicines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Hospital Management System. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

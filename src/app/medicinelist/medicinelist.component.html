@@ -1,0 +1,47 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+   
+  <a style="color:white;" class="navbar-brand" >All is Well Hospital</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a style="color:white;" class="nav-link active" aria-current="page" href="javascript:void(0);" [routerLink]="['/createMedicine']">Add Medicine</a>
+    </li>
+    <li class="nav-item">
+      <a style="color:white;" class="nav-link active" aria-current="page" href="javascript:void(0);" [routerLink]="['/doctor']">Back</a>
+    </li>
+  </ul>
+ </div>
+</nav>
+<br><br>
+<div class="container">
+  <hr>
+  <h1 style="text-align: center; margin-top: 20px;">Medicine List</h1>
+  <a style="color:rgb(86,86,86);font-size: x-large;"><marquee behavior="scroll" direction="left">Welcome to Medicine List Page.Click Add Medicine to Add new Medicines.</marquee></a>
+  <hr>
+  <a style="color:rgb(86,86,86);font-size: xx-large;">Current Medicine List in the Queue</a>
+<div class="table tableFixHead">
+
+<table class="table table-bordered">
+  <thead >
+    <tr>
+      <th>Id</th>
+      <th>DrugName</th>
+      <th>Stock</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let i of medicine">
+      <td>{{i.id}}</td>
+      <td>{{i.drugname}}</td>
+      <td>{{i.stock}}</td>
+      <td>
+        <button class="btn btn-info" (click)="update(i.id)" type="submit">Update</button>
+        <button class="btn btn-danger" type="submit" (click)="delete(i.id)" style="margin-left: 10px;">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
